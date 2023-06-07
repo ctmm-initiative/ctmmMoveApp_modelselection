@@ -9,5 +9,4 @@ rFunction = function(data) {
   saveRDS(f1, file = appArtifactPath("model.rds"))
   
   return(list(data,f1))
-  
 }
