@@ -1,13 +1,4 @@
 {
-  "settings": [
-    {
-      "id": "zoom",
-      "name": "Zoom",
-      "description": "Quantile fraction of the data, Gaussian ctmm, or UD range to plot, whichever is larger.",
-      "defaultValue": 1.0,
-      "type": "DOUBLE"
-    }
-  ],
   "dependencies": {
     "R": [
       {
