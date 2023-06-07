@@ -8,5 +8,6 @@ rFunction = function(data) {
   capture.output(summary(f1), file = appArtifactPath("model_summary.txt"))
   saveRDS(f1, file = appArtifactPath("model.rds"))
   
+  
   return(list(data,f1))
 }
