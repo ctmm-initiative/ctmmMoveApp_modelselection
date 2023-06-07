@@ -2,7 +2,9 @@
   "dependencies": {
     "R": [
       {
-        "name": "ctmm",
+        "name": "ctmm"
+      },
+      {
         "name": "purrr"
       }
     ]
