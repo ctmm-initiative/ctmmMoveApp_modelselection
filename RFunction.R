@@ -16,5 +16,5 @@ rFunction = function(data) {
     mutate(id = rep(names(f1), lens), unit = rownames(xx)) |> 
     select(id, unit, low, est, high) |> 
     write.csv("ctmm_select_summary.txt")
-  return(list(data,f1))
+  return(list(f1, data))
 }
