@@ -1,5 +1,6 @@
 library(ctmm)
 library(purrr)
+library(dplyr)
 
 rFunction = function(data) {
   
@@ -15,6 +16,6 @@ rFunction = function(data) {
   xx |> as_tibble() |> 
     mutate(id = rep(names(f1), lens), unit = rownames(xx)) |> 
     select(id, unit, low, est, high) |> 
-    write.csv("ctmm_select_summary.txt")
+    write.csv(appArtifactPath("ctmm_select_summary.txt"))
   return(list(f1, data))
 }
