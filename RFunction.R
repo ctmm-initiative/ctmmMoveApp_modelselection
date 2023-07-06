@@ -6,11 +6,23 @@ rFunction = function(data) {
   
   g <- lapply(data, \(x) ctmm.guess(x, interactive = FALSE))
   f1 <- map2(data, g, ~ ctmm.select(.x, .y))
-  capture.output(summary(f1), file = appArtifactPath("model_summary.txt"))
   saveRDS(f1, file = appArtifactPath("model.rds"))
   
-  # Return summary
-  xx <- map(f1, ~ summary(.x)$CI)
+  
+  xx <- map(f1, ~ summary(.x))
+  
+  # Overall summary
+  all.inds <- summary(f1)
+  x1 <- as.data.frame(all.inds)
+  x2 <- as.data.frame(sapply(xx, function(x) x$name))
+  x1$name <- rownames(x1)
+  x2$name <- rownames(x2)
+  out1 <- merge(x1, x2, by = "name")
+  names(out1) <- c("id", "IC", "RMSPE", "DOF", "model")
+  write.csv(out1, file = appArtifactPath("model_summary.txt"))
+  
+  # Individual summary
+  xx <- map(xx, ~ .x$CI)
   lens <- map_int(xx, nrow)
   xx <- do.call(rbind, xx)
   xx |> as_tibble() |> 
