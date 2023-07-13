@@ -2,7 +2,7 @@
 
 MoveApps
 
-Github repository: https://github.com/ctmm-initiative/moveapps_ctmm_modelselection
+Github repository: https://github.com/ctmm-initiative/ctmmMoveApp_modelselection
 
 ## Description
 This apps allows to fit a continuous-time movement model to the data selecting the best model using the function `ctmm.select()` from the **ctmm** package. 
