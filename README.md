@@ -38,5 +38,5 @@ none
 Please make an issue here if you repeatedly encounter errors.
 
 ### Null or error handling
-This app will fail or take **very** long of the variograms in the previous step suggest that some of the tracked animals do not show home-ranging behavior. 
+This app will fail or take **very** long if the variograms in the previous step suggest that some of the tracked animals do not show home-ranging behavior. 
 
