@@ -12,7 +12,7 @@ Based on the package `ctmm`, this App allows fitting continuous-time movement mo
 
 Beware that the model assumes range residence behaviour of the tracked animals. You can verify that from variograms that can be obtained using the `Variogram` App.
 
-Note that this App might take a while to run.
+**ATTENTION**: This App can have a long run time (hours). Consider pinning this app for further workflow runs. Subsequent apps like *`Autocorrelated Kernel Density Estimate (aKDE)`* and *`Estimate Occurrence Distribution (Kriging)`* with interactive user interface (once the app has run a button "OPEN APP UI" appears) can only be accessed for 8 hours (afterwards the "OPEN APP UI" is not visible anymore). To get again access to it, the workflow has to be run again. BUT before doing this, pin the workflow to the *`Fit a Continuous-Time Movement Model (ctmm)`* (menu at the top right corner of the App - *"Pin to this App"*) to avoid the long run time again. An app can only be pinned once it has run and produced results.
 
 
 ### Input data
